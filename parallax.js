@@ -4,7 +4,6 @@ $(window).scroll(function() {
 
 function paralaksa(){
     var wScroll = $(window).scrollTop();
-    var mediaVar = window.matchMedia("screen and (min-width: 1300px)");
     
     if(wScroll < 210){
     $('.banner-element').css('padding-top', 0+(wScroll*0.5)+'px')}
