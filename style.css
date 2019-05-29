@@ -454,5 +454,5 @@ footer{
 }
 @media (max-width: 1300px){
 	.menu-grid,.part-1,.news,.offer-grid{
-	opacity:1;}
+	opacity:1 !important;}
 }
