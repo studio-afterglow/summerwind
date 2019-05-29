@@ -1,0 +1,454 @@
+/*
+CSS RESET
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: "Merriweather";
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix {
+  overflow: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@font-face {
+    font-family: 'mutlu_ornamental';
+    src: url('Mutlu__Ornamental-webfont.eot');
+    src: url('Mutlu__Ornamental-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Mutlu__Ornamental-webfont.woff2') format('woff2'),
+         url('Mutlu__Ornamental-webfont.woff') format('woff'),
+         url('Mutlu__Ornamental-webfont.ttf') format('truetype'),
+         url('Mutlu__Ornamental-webfont.svg#mutlu_ornamental') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*          SITE STYLE          */
+.main-banner{
+    width: 100%;
+}
+.banner-image{
+    width: 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 65fr 35fr;
+    background-image: url(bezkonia.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.banner-element{
+    z-index: 1;
+    grid-column: 2 / span 1;
+    height: auto;
+    width: 100%;
+    padding-top: 0px;
+    position: relative;
+}
+.banner-bottom{
+    position: relative;
+    z-index: 2;
+    margin-top: -1em;
+    height: 1em;
+    width: 100%;
+    background-image: url(nav-bg.png);
+    box-shadow: 2px 2px 5px #888888;
+}
+h1{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid #9ed1b2 2px;
+    text-align: center;
+    margin-top: 8vw;
+    margin-bottom: 3vw;
+    font-size: 35px;
+    font-family: 'mutlu_ornamental';
+    color: #1a4a32;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    font-family: "Cormorant";
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #7daf91;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+h3{
+    font-family: "Cormorant";
+    font-style: italic;
+    color:#46765b;
+    font-size: 30px;
+}
+.part-1{
+    opacity: 0;
+    display: grid;
+    padding: 3em;
+    grid-gap: 5em;
+    grid-template-columns: 1fr;
+}
+.part-1-p{
+    display: flex;
+    align-items: center;
+}
+.part-1 h3{
+    margin-bottom: 1em;
+}
+.part-1 p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 1em;
+}
+.part-1-image{
+    background-image: url(part-1.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 5px #888888;
+    min-height: 300px;
+}
+@media(min-width:1015px){
+    .part-1{
+    display: grid;
+    padding: 3em;
+    grid-gap: 5em;
+    grid-template-columns: 3fr 2fr;
+}
+    h1{
+        margin-top: 5vw;
+    }
+}
+.news{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-gap: 10px;
+    opacity: 0;
+}
+@media(min-width: 640px){
+    .news{
+       grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+.news-image{
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 5px #888888;
+    min-height: 280px;
+    transition: 200ms;
+}
+.new1{
+    background-image: url(zrebie.jpg);
+}
+.new2{
+    background-image: url(amarantus.jpg);
+}
+.new3{
+    background-image: url(melissa.jpg);
+}
+.news-image:hover{
+    background-color: #c5ecd0;
+    background-blend-mode: soft-light;
+}
+.new-title{
+    font-family: "Cormorant";
+    color:#1a4a32;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 200ms;
+    letter-spacing: 1px;
+}
+.new-title:hover{
+    color: #7daf91;
+}
+.offer-grid{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 2em;
+    opacity: 0;
+}
+
+/* MENU - GRID */
+.menu-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    padding: 8px;
+    height: auto;
+    opacity: 0;
+}
+.menu-grid-element{
+    display: none;
+    background-color: #9ed1b2;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 5px #888888;
+    height: 120px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 250ms;
+    background-blend-mode: soft-light;
+}
+
+.menu-title{
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+    transition: 200ms;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+    border: solid white 2px;
+    color: white;
+}
+.menu-1, .menu-2, .menu-5, .menu-6, .menu-8, .menu-11{
+    cursor: pointer;
+}
+.menu-1{
+    background-image: url(menu/Onas.jpg);
+}
+.menu-2{
+    background-image: url(menu/newsy.jpg);
+}
+.menu-5{
+    background-image: url(menu/naszekonie.jpg);
+}
+.menu-6{
+    background-image: url(menu/pokazy.jpg);
+}
+.menu-8{
+    background-image: url(menu/sprzedaz.jpg);
+}
+.menu-11{
+    background-image: url(menu/kontakt.jpg);
+}
+
+.menu-3{
+    background-color: transparent;
+    background-image: url(menu/3.jpg);
+}
+.menu-4{
+    background-color: transparent;
+    background-image: url(menu/4.jpg);
+}
+.menu-7{
+    background-color: transparent;
+    background-image: url(menu/7.jpg);
+}
+.menu-9{
+    background-color: transparent;
+    background-image: url(menu/9.jpg);
+}
+.menu-10{
+    background-color: transparent;
+    background-image: url(menu/10.jpg);
+}
+.menu-1{display: flex; grid-column: 1 / 2;}
+.menu-2{display: flex; grid-column: 2 / 3;}
+.menu-5{display: flex; grid-column: 1 / 2; grid-row: 2 / 3;}
+.menu-6{display: flex; grid-column: 2 / 3; grid-row: 2 / 3;}
+.menu-8{display: flex; grid-column: 1 / 2; grid-row: 3 / 4;}
+.menu-11{display: flex; grid-column: 2 / 3; grid-row: 3 / 4;}
+
+
+@media(min-width: 520px){
+    .menu-grid-element{
+        height: 180px;
+    }
+}
+@media(min-width: 640px){
+    .menu-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0 20px 0px 20px;
+        grid-gap: 10px;
+    }
+    .menu-grid-element{
+        height: 200px;
+    }
+    .menu-1{grid-column: 1 / 3; }
+    .menu-2{grid-column: 3 / 5;}
+    
+    .menu-3{display: block; grid-column: 1 / 2; grid-row: 2 / 3;}
+    .menu-7{display: block; grid-column: 2 / 4; grid-row: 2 / 3;}
+    .menu-9{display: block; grid-column: 4 / 5; grid-row: 2 / 3;}
+    
+    .menu-5{grid-column: 1 / 3; grid-row: 3 / 4;}
+    .menu-6{ grid-column: 3 / 5; grid-row: 3 / 4;}
+    
+    .menu-8{grid-column: 1 / 3; grid-row: 4 / 5;}
+    .menu-11{grid-column: 3 / 5; grid-row: 4 / 5;}
+}
+@media(min-width: 640px){
+    h1{
+        font-size: 50px;
+    }
+    .banner-bottom{
+        margin-top: -2em;
+        height: 2em;
+    }
+    .menu-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0 20px 0px 20px;
+        grid-gap: 10px;
+    }
+    .menu-grid-element{
+        height: 200px;
+    }
+    .menu-1{grid-column: 1 / 3; }
+    .menu-2{grid-column: 3 / 5;}
+    
+    .menu-3{display: block; grid-column: 1 / 2; grid-row: 2 / 3;}
+    .menu-7{display: block; grid-column: 2 / 4; grid-row: 2 / 3;}
+    .menu-9{display: block; grid-column: 4 / 5; grid-row: 2 / 3;}
+    
+    .menu-5{grid-column: 1 / 3; grid-row: 3 / 4;}
+    .menu-6{grid-column: 3 / 5; grid-row: 3 / 4;}
+    
+    .menu-8{grid-column: 1 / 3; grid-row: 4 / 5;}
+    .menu-11{grid-column: 3 / 5; grid-row: 4 / 5;}
+}
+@media(min-width:1024px){
+    .banner-bottom{
+        height: 3em;
+        margin-top: -3em;
+    }
+    h1{
+        font-size: 70px;
+    }
+    .menu-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding: 0px 40px 0px 40px;
+        grid-gap: 12px;
+    }
+    .menu-title{
+        border: solid #9ed1b2 2px;
+        color: #9ed1b2;
+    }
+    .menu-grid-element{
+        background-blend-mode:normal;
+    }
+    .menu-grid-element:hover{
+    background-blend-mode: soft-light;
+    
+}
+    .menu-grid-element:hover>.menu-title{
+    border-color: white;
+    color: white;
+    }
+    .menu-grid-element{
+        height: 250px;
+    }
+    .menu-1{grid-column:1/3;}
+    .menu-2{grid-column:3/5;}
+    .menu-3{display:block; grid-column:5/7; grid-row: 1/2;}
+    
+    .menu-4{display:block; grid-column: 1/2; grid-row: 2/3;}
+    .menu-5{grid-column: 2/4; grid-row: 2/3;}
+    .menu-6{grid-column: 4/6; grid-row: 2/3;}
+    .menu-7{display:block; grid-column: 6/7; grid-row: 2/3;}
+    
+    .menu-8{grid-column: 1/3; grid-row: 3/4;}
+    .menu-9{display:block; grid-column: 3/4; grid-row: 3/4;}
+    .menu-10{display:block; grid-column: 4/5; grid-row: 3/4;}
+    .menu-11{grid-column: 5/7; grid-row: 3/4;}
+}
+
+.sales{
+    background-image: url(sales.jpg);
+    display: flex;
+    height: 300px;
+}
+.stallions{
+    background-image: url(stallions.jpg);
+    display: flex;
+    height: 300px;
+}
+@media (max-width: 750px){
+    .sales,.stallions{
+        height: 200px;
+    }
+}
+
+/* FOOTER */ 
+footer{
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #c5ecd0;
+    bottom: 0; 
+    text-align: center;
+    margin-top: 6em;
+}
+.footer-text{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
